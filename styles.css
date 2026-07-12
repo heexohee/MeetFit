@@ -3649,9 +3649,9 @@ svg {
   .time-input-pair {
     display: flex;
     align-items: center;
-    width: 260px;
+    width: 240px;
     max-width: 100%;
-    justify-self: center;
+    justify-self: start;
     gap: 4px;
   }
 
@@ -3667,6 +3667,16 @@ svg {
     flex: 0 0 calc((100% - 20px) / 2);
     width: calc((100% - 20px) / 2);
     max-width: calc((100% - 20px) / 2);
+    min-inline-size: 0;
+    padding-inline: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+  }
+
+  .time-input-pair .time-input::-webkit-date-and-time-value {
+    min-width: 0;
+    text-align: center;
   }
 
 }
