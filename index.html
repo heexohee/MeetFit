@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetFit - 6명 회의 일정 조율</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <div class="brand-block">
+          <a class="brand" href="#" aria-label="MeetFit 홈">
+            <span class="brand-icon" aria-hidden="true">
+              <img src="./assets/meetfit_logo.png" alt="" />
+            </span>
+            <span>MeetFit</span>
+          </a>
+          <p>모두가 납득할 수 있는<br />최적의 회의 시간을 찾아드려요</p>
+        </div>
+
+        <nav class="stepper" aria-label="MeetFit 사용 흐름">
+          <button class="step is-active" type="button" data-step="0">
+            <span class="step-number">1</span>
+            <span><strong>회의 만들기</strong><small>기본 정보 입력</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+          <button class="step" type="button" data-step="1">
+            <span class="step-number">2</span>
+            <span><strong>참석자 설정</strong><small>논의 필요도 구분</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+          <button class="step" type="button" data-step="2">
+            <span class="step-number">3</span>
+            <span><strong>후보 시간 찾기</strong><small>캘린더 기반 후보 생성</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+          <button class="step" type="button" data-step="3">
+            <span class="step-number">4</span>
+            <span><strong>조율 요청</strong><small>링크 전송 및 응답</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+          <button class="step" type="button" data-step="6">
+            <span class="step-number">5</span>
+            <span><strong>추천 시간 확인</strong><small>상황을 반영한 추천</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+          <button class="step" type="button" data-step="8">
+            <span class="step-number">6</span>
+            <span><strong>일정 공유 완료</strong><small>최종 일정 통보</small></span>
+            <span class="step-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+          </button>
+        </nav>
+      </header>
+
+      <section class="demo-board" aria-live="polite">
+        <div class="screen-title">
+          <span id="screenNumber">1</span>
+          <div>
+            <h1 id="screenHeading">회의 만들기</h1>
+            <p id="screenSubheading">구글 캘린더에서 100% 불가능한 시간을 제외하기 전, 회의 조건을 입력합니다.</p>
+          </div>
+        </div>
+
+        <section class="app-card">
+          <aside class="side-nav" aria-label="앱 메뉴">
+            <a class="side-brand" href="#" aria-label="MeetFit">
+              <span class="tiny-brand" aria-hidden="true">
+                <img src="./assets/meetfit_logo.png" alt="" />
+              </span>
+              <span>MeetFit</span>
+            </a>
+            <button class="nav-item is-active" type="button" data-menu-step="0">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"></path></svg>
+              회의 만들기
+            </button>
+            <button class="nav-item" type="button" data-menu-step="1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-8 0v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              참석자 설정
+            </button>
+            <button class="nav-item" type="button" data-menu-step="7">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              예약 현황
+            </button>
+            <button class="nav-item" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.2.4.5.75.9 1h.8a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.6 1Z"></path></svg>
+              설정
+            </button>
+          </aside>
+
+          <article class="screen-panel" id="screenPanel"></article>
+        </section>
+      </section>
+
+    </main>
+
+    <script src="./mock-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

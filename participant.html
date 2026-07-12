@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetFit - 참석자 응답</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="participant-page" data-view="participant">
+    <main class="participant-shell">
+      <header class="participant-brandbar" aria-label="MeetFit">
+        <a class="brand participant-brand" href="./participant.html" aria-label="MeetFit">
+          <span class="brand-icon" aria-hidden="true">
+            <img src="./assets/meetfit_logo.png" alt="" />
+          </span>
+          <span>MeetFit</span>
+        </a>
+      </header>
+
+      <div class="sr-only" aria-hidden="true">
+        <span id="screenNumber">6</span>
+        <h1 id="screenHeading">참석자 응답</h1>
+        <p id="screenSubheading">후보 시간에 대한 가능 정도를 선택합니다.</p>
+      </div>
+
+      <section class="participant-card">
+        <article class="screen-panel participant-panel" id="screenPanel"></article>
+      </section>
+    </main>
+
+    <script src="./mock-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
