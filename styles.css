@@ -3571,8 +3571,9 @@ svg {
   }
 
   .time-input-pair {
-    width: 100%;
-    max-width: none;
+    width: 260px;
+    max-width: 100%;
+    justify-self: center;
     grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
     column-gap: 10px;
   }
