@@ -632,7 +632,7 @@ const screens = [
               )
               .join("")}
           </div>
-          <a class="secondary-btn host-calendar-link" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer">구글 캘린더에서 보기</a>
+          <a class="primary-btn host-calendar-link" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer">구글 캘린더에서 보기</a>
         </div>
       </div>
     `,
