@@ -8,8 +8,8 @@
 - 추천 점수는 실제 알고리즘이 아니라 설계 원칙을 설명하기 위한 목업 기준입니다.
 
 ## Prototype
-- 주최자 플로우: [https://.../](https://meet-fit-six.vercel.app/)
-- 참석자 응답 플로우: [https://.../participant.html](https://meet-fit-six.vercel.app/participant.html)
+- 주최자 플로우: [MeetFit](https://meet-fit-six.vercel.app/)
+- 참석자 응답 플로우: [MeetFit/participant](https://meet-fit-six.vercel.app/participant.html)
 
 ## 문제 정의
 
