@@ -3571,16 +3571,26 @@ svg {
   }
 
   .time-input-pair {
+    display: flex;
+    align-items: center;
     width: 260px;
     max-width: 100%;
     justify-self: center;
-    grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
-    column-gap: 10px;
+    gap: 10px;
   }
 
   .time-input-pair span {
-    display: block;
+    display: flex;
+    flex: 0 0 18px;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
+  }
+
+  .time-input-pair .time-input {
+    flex: 0 0 calc((100% - 38px) / 2);
+    width: calc((100% - 38px) / 2);
+    max-width: calc((100% - 38px) / 2);
   }
 
 }
