@@ -121,14 +121,7 @@ const screens = [
     html: () => {
       const selected = people();
       const query = attendeeSearchTerm.trim().toLowerCase();
-      const searchResults = directoryPeople
-        .filter((person) => {
-          return [person.name, person.title, person.team, person.email]
-            .join(" ")
-            .toLowerCase()
-            .includes(query);
-        })
-        .slice(0, 5);
+      const searchResults = searchDirectoryPeople(query);
 
       return `
         <div class="panel-width-lg">
@@ -145,17 +138,9 @@ const screens = [
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3"></path><circle cx="11" cy="11" r="7"></circle></svg>
                   <input id="attendeeSearch" value="${escapeHtml(attendeeSearchTerm)}" placeholder="이름 또는 이메일로 검색" autocomplete="off" />
                 </label>
-                ${
-                  query
-                    ? `<div class="directory-list search-results">
-                        ${
-                          searchResults.length
-                            ? searchResults.map((person) => directoryRow(person)).join("")
-                            : `<div class="empty-row">검색 결과가 없어요.</div>`
-                        }
-                      </div>`
-                    : ""
-                }
+                <div class="directory-list search-results" data-search-results ${query ? "" : "hidden"}>
+                  ${directorySearchResultsHtml(searchResults)}
+                </div>
               </div>
             </section>
 
@@ -797,6 +782,25 @@ function directoryRow(person) {
       </div>
     </div>
   `;
+}
+
+function searchDirectoryPeople(query) {
+  if (!query) return [];
+
+  return directoryPeople
+    .filter((person) => {
+      return [person.name, person.title, person.team, person.email]
+        .join(" ")
+        .toLowerCase()
+        .includes(query);
+    })
+    .slice(0, 5);
+}
+
+function directorySearchResultsHtml(searchResults) {
+  return searchResults.length
+    ? searchResults.map((person) => directoryRow(person)).join("")
+    : `<div class="empty-row">검색 결과가 없어요.</div>`;
 }
 
 function emailRecipientRow(person) {
@@ -1730,11 +1734,13 @@ panel.addEventListener("input", (event) => {
 
   if (event.target.matches("#attendeeSearch")) {
     attendeeSearchTerm = event.target.value;
-    render(currentStep);
-    const searchInput = document.querySelector("#attendeeSearch");
-    if (searchInput) {
-      searchInput.focus();
-      searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+    const query = attendeeSearchTerm.trim().toLowerCase();
+    const searchResults = document.querySelector("[data-search-results]");
+    if (searchResults) {
+      searchResults.hidden = !query;
+      searchResults.innerHTML = query
+        ? directorySearchResultsHtml(searchDirectoryPeople(query))
+        : "";
     }
   }
 });
