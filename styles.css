@@ -100,6 +100,10 @@ svg {
   padding: 20px 28px 24px;
 }
 
+.participant-page .site-footer-inner {
+  width: min(980px, 100%);
+}
+
 .site-footer p {
   display: flex;
   align-items: center;
