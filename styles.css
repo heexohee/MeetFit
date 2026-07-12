@@ -3571,7 +3571,15 @@ svg {
   }
 
   .time-input-pair {
-    max-width: 280px;
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .time-input-pair span {
+    display: block;
+    line-height: 1;
   }
 
 }
