@@ -3648,21 +3648,21 @@ svg {
     width: 260px;
     max-width: 100%;
     justify-self: center;
-    gap: 10px;
+    gap: 4px;
   }
 
   .time-input-pair span {
     display: flex;
-    flex: 0 0 18px;
+    flex: 0 0 12px;
     align-items: center;
     justify-content: center;
     line-height: 1;
   }
 
   .time-input-pair .time-input {
-    flex: 0 0 calc((100% - 38px) / 2);
-    width: calc((100% - 38px) / 2);
-    max-width: calc((100% - 38px) / 2);
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 
 }

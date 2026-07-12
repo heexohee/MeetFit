@@ -167,7 +167,7 @@ const screens = [
 
           <div class="button-row attendee-actions">
             <button class="secondary-btn" type="button" data-next="0">이전</button>
-            <button class="primary-btn" type="button" data-next="2">다음: 후보 시간 찾기로</button>
+            <button class="primary-btn" type="button" data-next="2">다음: 후보 시간 찾기</button>
           </div>
         </div>
       `;
@@ -246,7 +246,7 @@ const screens = [
 
               <div class="button-row">
                 <button class="secondary-btn" type="button" data-next="1">이전</button>
-                <button class="primary-btn" type="button" data-next="3">조율 요청 보내기</button>
+                <button class="primary-btn" type="button" data-next="3">다음: 조율 요청 확인</button>
               </div>
             `
             : `
@@ -323,9 +323,9 @@ const screens = [
             ${emailRequestSent ? "" : `<button class="secondary-btn" type="button" data-next="2">이전</button>`}
             ${
               emailRequestSent
-                ? `<button class="primary-btn" type="button" data-next="4">응답 대기 화면으로</button>`
+                ? `<button class="primary-btn" type="button" data-next="4">다음: 응답 현황 확인</button>`
                 : targetRecipients.length
-                ? `<button class="primary-btn" type="button" data-send-request>확인한 내용으로 이메일 보내기</button>`
+                ? `<button class="primary-btn" type="button" data-send-request>조율 요청 이메일 보내기</button>`
                 : `<button class="primary-btn" type="button" data-next="1">참석자 추가하기</button>`
             }
           </div>
@@ -407,10 +407,10 @@ const screens = [
           ${
             recommendationReady
               ? `<div class="button-row wait-action-row">
-                  <button class="primary-btn" type="button" data-next="6">응답 결과 보기</button>
+                  <button class="primary-btn" type="button" data-next="6">다음: 추천 시간 확인</button>
                 </div>`
               : `<div class="button-row wait-action-row">
-                  <button class="primary-btn" type="button" data-show-results>도착한 응답 확인하기</button>
+                  <button class="primary-btn" type="button" data-show-results>다음: 추천 시간 확인</button>
                 </div>`
           }
         </div>
@@ -549,7 +549,7 @@ const screens = [
         <div class="button-row final-invite-action">
           ${
             finalRecommendationId
-              ? `<button class="primary-btn" type="button" data-finalize-recommendation="${finalRecommendationId}">선택한 시간으로 최종 초대 보내기</button>`
+              ? `<button class="primary-btn" type="button" data-finalize-recommendation="${finalRecommendationId}">선택한 시간으로 일정 확정하기</button>`
               : `<button class="primary-btn" type="button" disabled>최종 시간을 선택해주세요</button>`
           }
         </div>
@@ -598,7 +598,7 @@ const screens = [
           <button class="secondary-btn" type="button" data-next="6">이전</button>
           ${
             finalRecommendationId
-              ? `<button class="primary-btn" type="button" data-finalize-recommendation="${finalRecommendationId}">이 시간으로 일정 공유하기</button>`
+              ? `<button class="primary-btn" type="button" data-finalize-recommendation="${finalRecommendationId}">선택한 시간으로 일정 확정하기</button>`
               : `<button class="primary-btn" type="button" disabled>최종 시간을 선택해주세요</button>`
           }
         </div>
