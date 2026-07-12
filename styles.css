@@ -866,6 +866,14 @@ svg {
   margin-top: 18px;
 }
 
+.host-calendar-link {
+  display: inline-flex;
+  width: min(320px, 100%);
+  min-height: 46px;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
 .candidate-list,
 .people-list,
 .answer-table,
@@ -3092,6 +3100,10 @@ svg {
   color: var(--muted);
   font-size: 15px;
   font-weight: 650;
+}
+
+.complete-subcopy {
+  margin-top: -10px !important;
 }
 
 .final-time {

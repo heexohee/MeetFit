@@ -448,7 +448,7 @@ const screens = [
         <div class="response-layout">
         <div class="response-title">
           <h2>${responsePerson.name}님, 일정 조율을 부탁드려요</h2>
-          <p>${organizer.name}(주최자)님이 보낸 ${meetingDetails.name} 일정 조율 요청이에요.<br />후보 시간 앞뒤 일정을 확인하고, 실제 가능한 정도를 골라주세요.</p>
+          <p>${organizer.name}님이 보낸 일정 조율 요청이에요.<br />후보별 앞뒤 일정을 확인하고, 가능한 정도를 선택해주세요.</p>
         </div>
 
         <div class="response-brief" aria-label="회의 정보">
@@ -632,6 +632,7 @@ const screens = [
           ${celebrateIcon()}
           <h2>회의 시간이 공유됐어요!</h2>
           <p>모두의 응답을 바탕으로<br /><strong>${finalRecommendation().date} ${finalRecommendation().time}</strong>에 만나기로 했어요.</p>
+          <p class="complete-subcopy">구글 캘린더 초대와 최종 확인 메일을 참석자에게 보냈어요.</p>
 
           <div class="share-list">
             ${people()
@@ -646,6 +647,7 @@ const screens = [
               )
               .join("")}
           </div>
+          <a class="secondary-btn host-calendar-link" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer">구글 캘린더에서 보기</a>
         </div>
       </div>
     `,
