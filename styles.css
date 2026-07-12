@@ -47,6 +47,13 @@ body {
   line-height: 1.5;
 }
 
+.participant-page {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+}
+
 button,
 input,
 select,
@@ -102,6 +109,12 @@ svg {
 
 .participant-page .site-footer-inner {
   width: min(980px, 100%);
+}
+
+.participant-page .site-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: auto;
 }
 
 .site-footer p {
@@ -429,6 +442,7 @@ svg {
 }
 
 .participant-shell {
+  flex: 1 0 auto;
   width: min(980px, 100%);
   margin: 0 auto;
   padding: 28px;
