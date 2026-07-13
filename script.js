@@ -518,7 +518,7 @@ const screens = [
           </div>
         </div>
 
-        <button class="primary-btn" type="button" data-submit-response>내 상황 보내기</button>
+        <button class="primary-btn" type="button" data-submit-response>내 의견 보내기</button>
       </div>
       `;
     },
@@ -1131,6 +1131,12 @@ function compactBufferText(value) {
   return value.replace(/^앞\s*/, "").replace(/^뒤\s*/, "");
 }
 
+function stackedContextText(value) {
+  const [primary, ...detail] = value.trim().split(/\s+/);
+  if (!detail.length) return escapeHtml(primary);
+  return `${escapeHtml(primary)}<br />${escapeHtml(detail.join(" "))}`;
+}
+
 function responseCandidateCard(candidate) {
   return `
     <article class="response-candidate-card">
@@ -1145,15 +1151,15 @@ function responseCandidateCard(candidate) {
       <div class="response-calendar-context" aria-label="${candidate.day} ${candidate.time} 전후 일정">
         <div>
           <span>앞</span>
-          <strong>${compactBufferText(candidate.beforeBuffer)}</strong>
+          <strong>${stackedContextText(compactBufferText(candidate.beforeBuffer))}</strong>
         </div>
         <div>
           <span>뒤</span>
-          <strong>${compactBufferText(candidate.afterBuffer)}</strong>
+          <strong>${stackedContextText(compactBufferText(candidate.afterBuffer))}</strong>
         </div>
         <div>
           <span>근접</span>
-          <strong>${candidate.nearby}</strong>
+          <strong>${stackedContextText(candidate.nearby)}</strong>
         </div>
       </div>
 

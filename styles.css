@@ -2630,13 +2630,13 @@ svg {
 }
 
 .response-calendar-context strong {
-  overflow: hidden;
+  overflow: visible;
   color: #405067;
   font-size: 12px;
   font-weight: 740;
   line-height: 1.4;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-overflow: clip;
+  white-space: normal;
 }
 
 .response-option-area {
