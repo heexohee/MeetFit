@@ -3394,6 +3394,10 @@ svg {
     grid-template-columns: 1fr;
   }
 
+  .response-calendar-context strong {
+    min-block-size: 2.8em;
+  }
+
   .weekly-grid {
     display: none;
   }
