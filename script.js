@@ -195,7 +195,7 @@ const screens = [
             <h2>${isComplete ? "TOP 3 후보 시간대" : "캘린더에서 가능한 시간을 찾고 있어요"}</h2>
             <p>${
               isComplete
-                ? "캘린더와 참석 조건을 바탕으로 가장 적합한 3개 시간대를 추렸어요."
+                ? "캘린더와 참석 조건을 바탕으로 가장 적합한 시간대를 추렸어요."
                 : `${participantCount}명의 구글 캘린더에서 이미 불가능한 시간을 먼저 제외합니다.`
             }</p>
           </div>
@@ -1083,11 +1083,7 @@ function candidateRequestList() {
   return `
     <section class="request-candidate-section">
       <div class="request-candidate-head">
-        <div>
-          <h3>TOP 3 후보 시간대</h3>
-          <p>캘린더와 참석 조건을 바탕으로 가장 적합한 3개 시간대를 추렸어요.</p>
-        </div>
-        <span>${candidateRows.length}개 후보</span>
+        <h3>후보 상세</h3>
       </div>
       <div class="request-candidate-list">
         ${rankedCandidateRows().map((candidate, index) => candidateRequestCard(candidate, index)).join("")}

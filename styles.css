@@ -1131,6 +1131,11 @@ svg {
   gap: 12px;
 }
 
+.request-candidate-section {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
 .weekly-summary-head,
 .request-candidate-head {
   display: flex;
@@ -3403,8 +3408,12 @@ svg {
   }
 
   .request-candidate-head {
-    align-items: flex-start;
-    flex-direction: column;
+    display: none;
+  }
+
+  .request-candidate-section {
+    padding-top: 0;
+    border-top: 0;
   }
 
   .request-candidate-card {
