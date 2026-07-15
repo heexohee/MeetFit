@@ -956,6 +956,10 @@ svg {
   background: #fff;
 }
 
+.search-results[hidden] {
+  display: none;
+}
+
 .calendar-sync {
   position: relative;
   display: grid;
